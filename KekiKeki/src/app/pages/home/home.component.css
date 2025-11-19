@@ -50,7 +50,7 @@
     color: #1f2937; /* correct gray-800 */
 }
 
-.hero-section h1, .featured-section h2 {
+.hero-section h1, .featured-section h2, .faq-question-title{
     color: #db2777;
     background: linear-gradient(90deg,#db2777,#ec4899,#f472b6);
     -webkit-background-clip: text;

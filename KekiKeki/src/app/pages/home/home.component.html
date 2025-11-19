@@ -50,7 +50,7 @@
 <div class="faq-section py-8 px-4 bg-white">
     <div class="grid justify-content-center">
         <div class="col-12 md:col-8">
-            <h2 class="text-center text-4xl font-bold text-pink-600 mb-6">Preguntas Frecuentes</h2>
+            <h2 class="faq-question-title">Preguntas Frecuentes</h2>
             <p-accordion [value]="'0'">
                 <p-accordion-panel *ngFor="let faq of faqs; let i = index" [value]="i.toString()">
                     <p-accordion-header>{{ faq.question }}</p-accordion-header>
