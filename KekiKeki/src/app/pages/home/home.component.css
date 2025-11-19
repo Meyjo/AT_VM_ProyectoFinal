@@ -1,0 +1,265 @@
+.hero-section {
+    background-image:
+        linear-gradient(rgba(255, 240, 247, 0.85), rgba(255, 230, 242, 0.85)),
+        url('https://images.unsplash.com/photo-1517433670267-08bbd4be890f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.product-item h4{
+    font-weight: 600;
+    color: #374151;
+    margin-top: 1rem;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2.5rem 3rem;
+    background: radial-gradient(circle at top left, #fff0f7 0%, #ffe6f2 60%, #ffffff 100%);
+    border-radius: 2.5rem;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 8px 32px rgba(219,39,119,0.15);
+    border: 2px solid #fbd3e4;
+}
+
+.text-pink-700 {
+    color: #be185d;
+}
+
+.text-gray-700 {
+    color: #374151;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.text-pink-600 {
+    color: #db2777;
+}
+
+.text-pink-500 {
+    color: #ec4899; /* correct pink-500 */
+}
+
+.text-gray-800 {
+    color: #1f2937; /* correct gray-800 */
+}
+
+.hero-section h1, .featured-section h2 {
+    color: #db2777;
+    background: linear-gradient(90deg,#db2777,#ec4899,#f472b6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 0 2px 6px rgba(219,39,119,0.15);
+    font-size: 3rem;
+}
+.hero-section p { 
+    color: #4b5563;
+    font-size: 1.25rem; }
+
+/* Featured section improvements */
+.featured-section {
+    background: linear-gradient(180deg,#ffffff 0%, #fff5fa 100%);
+}
+.featured-section .card {
+    background: transparent;
+    border: 2px solid #fbd3e4;
+    border-radius: 1rem;
+    box-shadow: 0 8px 28px rgba(219,39,119,0.12);
+}
+
+.featured-section .product-detail h4{
+    font-weight: 800;
+    color: #db2777;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
+.featured-section .product-detail h6{
+    font-weight: 800;
+    color: #374151;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
+
+.featured-section .product-item img {
+    border: none;
+    transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.featured-section .product-item img:hover {
+    transform: scale(1.03);
+    border: 1px solid #ec4899;
+    box-shadow: 0 8px 18px rgba(219,39,119,0.25);
+}
+
+/* Carousel item container */
+.featured-section .border-round-xl {
+    border: 1px solid #fbd3e4;
+    background: linear-gradient(145deg,#ffffff 0%,#ffeef6 100%);
+}
+
+/* About section tweak */
+.about-section {
+    background: linear-gradient(90deg,#fff5fa 0%,#ffffff 50%,#fff5fa 100%);
+}
+.about-section h1 { background: none; color:#be185d; }
+.about-section p { 
+    color:#000000;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+/* FAQ section header unify */
+/* FAQ section unified (remove duplicate background declarations) */
+.faq-section { background:#ffffff; }
+
+/* Utility for gradient titles reused */
+.gradient-title {
+    background: linear-gradient(90deg,#db2777,#ec4899,#f472b6);
+    color: transparent;
+}
+
+.bg-pink-50 {
+    background-color: #fdf2f8;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .md\:col-6 {
+        width: 50%;
+    }
+}
+
+.text-center { text-align: center; }
+.align-items-center { align-items: center; }
+.justify-content-center { justify-content: center; }
+.flex { display: flex; }
+.gap-2 { gap: 0.5rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+.mb-6 { margin-bottom: 2rem; }
+.py-8 { padding-top: 3rem; padding-bottom: 3rem; }
+.px-4 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.p-6 { padding: 2rem; }
+.w-full { width: 100%; }
+.shadow-2 { box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06); }
+.shadow-4 { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); }
+.border-round-xl { border-radius: 1rem; }
+.border-round-2xl { border-radius: 1.5rem; }
+.relative { position: relative; }
+.absolute { position: absolute; }
+
+/* FAQ section restyle to match KekiKeki look */
+/* (Removed duplicate .faq-section background rule) */
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 640px) {
+    .hero-section { height: 70vh; }
+    .hero-content { padding: 2rem 1.5rem; border-radius: 2rem; }
+    .hero-section h1 { font-size: 2.5rem; line-height: 1.2; }
+    .featured-section .border-round-xl { margin: .5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .featured-section .product-item img, .featured-section .product-item img:hover {
+        transition: none;
+        transform: none;
+        box-shadow: 0 4px 12px rgba(219,39,119,0.15);
+    }
+}
+
+.faq-section p-accordion {
+    display: block;
+}
+
+.faq-section p-accordion-panel {
+    background: #db87cd;
+    border: 1px solid #f7d9e6;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    box-shadow: 0 8px 16px rgba(219, 39, 119, 0.06);
+}
+
+.faq-section p-accordion-header {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem 1.25rem;
+    background: #ffffff;
+    color: #db2777;
+    font-weight: 700;
+}
+
+.faq-section p-accordion-header:hover {
+    background: #fff6fb; /* soft pink hover */
+    color: #db2777; /* keep contrast on hover */
+}
+
+.faq-section p-accordion-header i {
+    color: #db2777;
+}
+
+.faq-section p-accordion-content {
+    background: #ffffff;
+    padding: 1rem 1.25rem 1.25rem;
+    color: #374151;
+    line-height: 1.75rem;
+}
+
+.faq-section .text-pink-600 {
+    color: #db2777;
+}
+
+/* PrimeNG Web Components: style shadow parts for light look */
+.faq-section p-accordion-panel::part(header) {
+    background: #ffffff;
+    color: #db2777;
+    font-weight: 700;
+}
+
+.faq-section p-accordion-panel::part(header-hover) {
+    background: #fff6fb;
+    color: #db2777;
+}
+
+.faq-section p-accordion-panel::part(content) {
+    background: #ffffff;
+    color: #374151;
+}
+
+/* Fallback via design tokens (if supported by theme) */
+.faq-section {
+    --p-accordion-header-background: #ffffff;
+    --p-accordion-header-color: #db2777;
+    --p-accordion-header-hover-background: #fff6fb;
+    --p-accordion-header-hover-color: #db2777;
+    --p-accordion-content-background: #ffffff;
+    --p-accordion-content-color: #374151;
+    --p-accordion-border-color: #f7d9e6;
+}
+
+/* Ensure toggle icon keeps contrast */
+.faq-section p-accordion-panel::part(icon),
+.faq-section p-accordion-panel::part(toggleicon) {
+    color: #db2777;
+}
+
+/* When panel is hovered, still keep text visible */
+.faq-section p-accordion-panel:hover::part(header) {
+    color: #db2777;
+}

@@ -1,0 +1,64 @@
+<p-toast></p-toast>
+
+<div class="hero-section">
+    <div class="hero-content">
+        <h1 class="">KekiKeki, <br> Sabor y Arte en Cada Bocado</h1>
+        <p class="">Rollitos de canela, tortas y galletas personalizadas
+        </p>
+        <p-button label="Ver Menú Completo" icon="pi pi-arrow-right" iconPos="right" (onClick)="goToMenu()" styleClass="p-button-rounded p-button-lg p-button-help"></p-button>
+    </div>
+</div>
+
+<div class="featured-section py-12 px-5">
+    <h2 class="text-center">Nuestros Favoritos</h2>
+    
+    <div class="card">
+        <p-carousel [value]="products" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions" [circular]="true" [autoplayInterval]="3000">
+            <ng-template let-product pTemplate="item">
+                <div class="border-1 surface-border border-round m-2 text-center py-5 px-3 shadow-2 bg-white border-round-xl">
+                    <div class="product-item">
+                        <img [src]="product.image" [alt]="product.name" class="w-full border-round shadow-1" style="height: 200px; object-fit: cover;" />
+                    </div>
+                    <div class="product-detail">
+                        <h4 class="">{{ product.name }}</h4>
+                        <h6 class="">$ {{ product.price }}</h6>
+                        <div class="">
+                            <p-button icon="pi pi-eye" [rounded]="true" [text]="true" severity="secondary" (onClick)="goToMenu()"></p-button>
+                            <p-button icon="pi pi-shopping-cart" styleClass="p-button-rounded p-button-help" (onClick)="addToCart(product)"></p-button>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </p-carousel>
+    </div>
+</div>
+
+<div class="about-section py-8 bg-pink-50">
+    <div class="grid grid-nogutter text-center align-items-center p-4">
+        <div class="col-12 md:col-6 p-6">
+            <h1 class="">Hecho a Mano con Pasión</h1>
+            <p class="">
+                En KekiKeki, cada postre es una obra de arte. Utilizamos solo los ingredientes más frescos y técnicas tradicionales para traerte el sabor auténtico de la repostería casera.
+            </p>
+        </div>
+        <div class="col-12 md:col-6">
+            <img src="/images/KekiKeki.png" alt="Baker" class="w-full border-round-2xl shadow-4" style="max-width: 500px;">
+        </div>
+    </div>
+</div>
+
+<div class="faq-section py-8 px-4 bg-white">
+    <div class="grid justify-content-center">
+        <div class="col-12 md:col-8">
+            <h2 class="text-center text-4xl font-bold text-pink-600 mb-6">Preguntas Frecuentes</h2>
+            <p-accordion [value]="'0'">
+                <p-accordion-panel *ngFor="let faq of faqs; let i = index" [value]="i.toString()">
+                    <p-accordion-header>{{ faq.question }}</p-accordion-header>
+                    <p-accordion-content>
+                        <p class="m-0 line-height-3 text-gray-700">{{ faq.answer }}</p>
+                    </p-accordion-content>
+                </p-accordion-panel>
+            </p-accordion>
+        </div>
+    </div>
+</div>

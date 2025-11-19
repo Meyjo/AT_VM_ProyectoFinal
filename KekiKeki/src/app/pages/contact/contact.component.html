@@ -1,0 +1,30 @@
+<div class="contact-container py-8 px-4">
+    <p-toast></p-toast>
+    <div class="grid justify-content-center">
+        <div class="col-12 md:col-8 lg:col-6">
+            <div class="card p-6 shadow-2 border-round-xl bg-white">
+                <h1 class="contact-title">Contáctanos</h1>
+                <p class="contact-description">¿Tienes alguna pregunta o quieres hacer un pedido especial? ¡Escríbenos!</p>
+                
+                <div class="flex flex-column gap-4">
+                    <p-floatLabel>
+                        <input pInputText id="name" [(ngModel)]="name" class="w-full" />
+                        <label for="name">Nombre</label>
+                    </p-floatLabel>
+
+                    <p-floatLabel>
+                        <input pInputText id="email" [(ngModel)]="email" class="w-full" />
+                        <label for="email">Correo Electrónico</label>
+                    </p-floatLabel>
+
+                    <p-floatLabel>
+                        <textarea id="message" rows="5" cols="30" pInputTextarea [(ngModel)]="message" class="w-full"></textarea>
+                        <label for="message">Mensaje</label>
+                    </p-floatLabel>
+
+                    <p-button label="Enviar Mensaje" icon="pi pi-send" (onClick)="sendMessage()" styleClass="w-full p-button-help p-button-lg"></p-button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

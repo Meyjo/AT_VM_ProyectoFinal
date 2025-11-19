@@ -1,0 +1,173 @@
+:host {
+	--kk-pink-50: #fff5fa;
+	--kk-pink-100: #ffeef6;
+	--kk-pink-200: #fbd3e4;
+	--kk-pink-500: #ec4899;
+	--kk-pink-600: #db2777;
+	--kk-gray-50: #f9fafb;
+	--kk-gray-700: #374151;
+}
+
+/* Menubar */
+:host ::ng-deep .p-menubar {
+	border: none;
+	border-bottom: 2px solid var(--kk-pink-200);
+	background: linear-gradient(90deg, #ffffff 0%, var(--kk-pink-50) 60%, #ffffff 100%);
+	backdrop-filter: blur(6px);
+	box-shadow: 0 4px 12px rgba(219,39,119,0.08);
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+}
+
+:host ::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menubar-item-link {
+	padding: .75rem 1rem;
+	border-radius: .75rem;
+	transition: background .3s ease, color .3s ease;
+	color: var(--kk-gray-700);
+	font-weight: 500;
+}
+
+/* Anchor itself forced color (some themes override to white) */
+:host ::ng-deep .p-menubar .p-menubar-item-link {
+    color: var(--kk-gray-700) !important;
+}
+
+/* Ensure menu item text and icons inherit visible color */
+:host ::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menubar-item-link .p-menuitem-text,
+:host ::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menubar-item-link .p-menuitem-icon {
+    color: var(--kk-gray-700) !important;
+}
+
+:host ::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menubar-item-link:hover {
+	background: var(--kk-pink-100);
+	color: var(--kk-pink-600);
+}
+
+/* Hover state for inner text/icon */
+:host ::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menubar-item-link:hover .p-menuitem-text,
+:host ::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menubar-item-link:hover .p-menuitem-icon {
+	color: var(--kk-pink-600) !important;
+}
+
+/* Active item (if PrimeNG applies active classes) */
+:host ::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem.p-focus > .p-menubar-item-link .p-menuitem-text,
+:host ::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem.p-highlight > .p-menubar-item-link .p-menuitem-text {
+	color: var(--kk-pink-600) !important;
+	font-weight: 600;
+}
+
+/* Brand span visibility and style */
+.brand-name {
+	font-size: 1.35rem;
+	font-weight: 600;
+	letter-spacing: .5px;
+	color: var(--kk-pink-600);
+}
+
+/* Cart button icon color unify */
+:host ::ng-deep .p-menubar .p-button .p-button-icon {
+	color: var(--kk-pink-600);
+}
+
+/* Ensure start template (brand area) text color isn't overridden */
+:host ::ng-deep .p-menubar .p-menubar-start, 
+:host ::ng-deep .p-menubar .p-menubar-start .brand-name, 
+:host ::ng-deep .p-menubar .p-menubar-start .pi-heart-fill {
+	color: var(--kk-pink-600) !important;
+}
+
+/* Heart icon explicit color */
+:host ::ng-deep .p-menubar .p-menubar-start .pi-heart-fill {
+	filter: drop-shadow(0 1px 2px rgba(219,39,119,0.3));
+}
+
+:host ::ng-deep .p-menubar .p-menubar-item-link .p-menuitem-icon { color: var(--kk-pink-600); }
+
+/* Brand heart & title */
+.text-pink-500 { color: var(--kk-pink-500); }
+.text-pink-600 { color: var(--kk-pink-600); }
+
+/* Cart Drawer */
+:host ::ng-deep .cart-drawer {
+	background: #ffffff;
+	color: var(--kk-gray-700);
+	border-left: 3px solid var(--kk-pink-200);
+	box-shadow: -4px 0 12px rgba(219,39,119,0.1);
+	display: flex;
+	flex-direction: column;
+}
+
+:host ::ng-deep .cart-drawer .p-drawer-header {
+	background: linear-gradient(90deg,#ffffff 0%, var(--kk-pink-50) 100%);
+	border-bottom: 1px solid var(--kk-pink-200);
+	color: var(--kk-pink-600);
+	font-weight: 600;
+}
+
+/* Scroll area inside drawer */
+:host ::ng-deep .cart-drawer .p-drawer-content {
+	padding: 0 0 .75rem 0;
+}
+
+/* Individual cart item */
+:host ::ng-deep .cart-drawer .cart-item {
+	border-radius: 12px;
+	background: linear-gradient(145deg,#ffffff 0%, var(--kk-pink-50) 100%);
+	border: 1px solid var(--kk-pink-100);
+	transition: box-shadow .25s ease, transform .25s ease;
+}
+
+:host ::ng-deep .cart-drawer .cart-item:hover {
+	box-shadow: 0 4px 14px rgba(219,39,119,0.18);
+	transform: translateY(-2px);
+}
+
+/* Quantity badge style */
+:host ::ng-deep .cart-drawer span.surface-100 {
+	background: var(--kk-pink-50);
+	border: 1px solid var(--kk-pink-200);
+	border-radius: 6px;
+}
+
+/* Buttons accent */
+:host ::ng-deep .cart-drawer .p-button-help {
+	background: var(--kk-pink-500);
+	border-color: var(--kk-pink-500);
+}
+
+:host ::ng-deep .cart-drawer .p-button-help:hover {
+	background: var(--kk-pink-600);
+	border-color: var(--kk-pink-600);
+}
+
+/* Danger outlined consistency */
+:host ::ng-deep .cart-drawer .p-button-danger.p-button-outlined {
+	color: var(--kk-pink-600);
+	border-color: var(--kk-pink-200);
+	background: transparent;
+}
+:host ::ng-deep .cart-drawer .p-button-danger.p-button-outlined:hover {
+	background: var(--kk-pink-100);
+	border-color: var(--kk-pink-500);
+}
+
+/* Empty cart placeholder */
+:host ::ng-deep .cart-drawer .pi-shopping-bag { color: var(--kk-pink-100); }
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+	:host ::ng-deep .p-menubar { border-bottom-width: 1px; }
+	:host ::ng-deep .cart-drawer { width: 100% !important; }
+	:host ::ng-deep .cart-drawer .p-drawer-header { padding: .75rem 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	:host ::ng-deep .cart-drawer .cart-item,
+	:host ::ng-deep .cart-drawer .cart-item:hover {
+		transition: none;
+		transform: none;
+		box-shadow: 0 2px 10px rgba(219,39,119,0.12);
+	}
+}
+
