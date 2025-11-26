@@ -1,0 +1,45 @@
+<div class="contact-container py-8 px-4">
+    <p-toast></p-toast>
+    <div class="grid justify-content-center">
+        <div class="col-12 md:col-8 lg:col-6">
+            <div class="card p-6 shadow-2 border-round-xl bg-white">
+                <h1 class="contact-title">Contáctanos</h1>
+                <p class="contact-description">¿Tienes alguna pregunta o quieres hacer un pedido especial? ¡Escríbenos!</p>
+                
+                <div class="flex flex-column gap-4">
+                    <form [formGroup]="contactForm" (ngSubmit)="sendMessage()">
+                        
+                    <p-floatLabel>
+                        <input pInputText id="name" formControlName="name" class="w-full" />
+                        <label for="name">Nombre</label>
+                        <small style="color: red;" *ngIf="contactForm.get('name')?.hasError('required') && contactForm.get('name')?.touched">
+                    El nombre es requerido.
+                </small>
+                    </p-floatLabel>
+
+                    <p-floatLabel>
+                        <input pInputText id="email" formControlName="email" class="w-full" />
+                        <label for="email">Correo Electrónico</label>
+                        <small style="color: red;" *ngIf="contactForm.get('email')?.hasError('required') && contactForm.get('email')?.touched">
+                    El correo es requerido.
+                </small>
+                <small style="color: red;" *ngIf="contactForm.get('email')?.hasError('email')">
+                    Debe ser un correo Electrónico
+                </small>
+                    </p-floatLabel>
+
+                    <p-floatLabel>
+                        <textarea id="message" rows="5" cols="30" pInputTextarea formControlName="message" class="w-full"></textarea>
+                        <label for="message">Mensaje</label>
+                        <small style="color: red;" *ngIf="contactForm.get('message')?.hasError('required') && contactForm.get('message')?.touched">
+                    El mensaje es requerido.
+                </small>
+                    </p-floatLabel>
+
+                    <p-button type="submit" label="Enviar Mensaje" icon="pi pi-send" styleClass="w-full p-button-help p-button-lg"></p-button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

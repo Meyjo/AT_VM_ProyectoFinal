@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\andre\\Proyectos Github\\Universidad\\AT_VM_ProyectoFinal\\backend\\KekiKekiAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{672A2AD4-4842-4746-94CF-A20ECB21BB27}|KekiKekiAPI\\KekiKekiAPI.csproj|c:\\users\\andre\\proyectos github\\universidad\\at_vm_proyectofinal\\backend\\kekikekiapi\\kekikekiapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{672A2AD4-4842-4746-94CF-A20ECB21BB27}|KekiKekiAPI\\KekiKekiAPI.csproj|solutionrelative:kekikekiapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{672A2AD4-4842-4746-94CF-A20ECB21BB27}|KekiKekiAPI\\KekiKekiAPI.csproj|c:\\users\\andre\\proyectos github\\universidad\\at_vm_proyectofinal\\backend\\kekikekiapi\\kekikekiapi\\models\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{672A2AD4-4842-4746-94CF-A20ECB21BB27}|KekiKekiAPI\\KekiKekiAPI.csproj|solutionrelative:kekikekiapi\\models\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{672A2AD4-4842-4746-94CF-A20ECB21BB27}|KekiKekiAPI\\KekiKekiAPI.csproj|c:\\users\\andre\\proyectos github\\universidad\\at_vm_proyectofinal\\backend\\kekikekiapi\\kekikekiapi\\models\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{672A2AD4-4842-4746-94CF-A20ECB21BB27}|KekiKekiAPI\\KekiKekiAPI.csproj|solutionrelative:kekikekiapi\\models\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{672A2AD4-4842-4746-94CF-A20ECB21BB27}|KekiKekiAPI\\KekiKekiAPI.csproj|c:\\users\\andre\\proyectos github\\universidad\\at_vm_proyectofinal\\backend\\kekikekiapi\\kekikekiapi\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{672A2AD4-4842-4746-94CF-A20ECB21BB27}|KekiKekiAPI\\KekiKekiAPI.csproj|solutionrelative:kekikekiapi\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{672A2AD4-4842-4746-94CF-A20ECB21BB27}|KekiKekiAPI\\KekiKekiAPI.csproj|c:\\users\\andre\\proyectos github\\universidad\\at_vm_proyectofinal\\backend\\kekikekiapi\\kekikekiapi\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{672A2AD4-4842-4746-94CF-A20ECB21BB27}|KekiKekiAPI\\KekiKekiAPI.csproj|solutionrelative:kekikekiapi\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{672A2AD4-4842-4746-94CF-A20ECB21BB27}|KekiKekiAPI\\KekiKekiAPI.csproj|c:\\users\\andre\\proyectos github\\universidad\\at_vm_proyectofinal\\backend\\kekikekiapi\\kekikekiapi\\models\\dtos\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{672A2AD4-4842-4746-94CF-A20ECB21BB27}|KekiKekiAPI\\KekiKekiAPI.csproj|solutionrelative:kekikekiapi\\models\\dtos\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{672A2AD4-4842-4746-94CF-A20ECB21BB27}|KekiKekiAPI\\KekiKekiAPI.csproj|c:\\users\\andre\\proyectos github\\universidad\\at_vm_proyectofinal\\backend\\kekikekiapi\\kekikekiapi\\models\\kekikeicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{672A2AD4-4842-4746-94CF-A20ECB21BB27}|KekiKekiAPI\\KekiKekiAPI.csproj|solutionrelative:kekikekiapi\\models\\kekikeicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "KekiKeiContext.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Proyectos Github\\Universidad\\AT_VM_ProyectoFinal\\backend\\KekiKekiAPI\\KekiKekiAPI\\Models\\KekiKeiContext.cs",
+              "RelativeDocumentMoniker": "KekiKekiAPI\\Models\\KekiKeiContext.cs",
+              "ToolTip": "C:\\Users\\andre\\Proyectos Github\\Universidad\\AT_VM_ProyectoFinal\\backend\\KekiKekiAPI\\KekiKekiAPI\\Models\\KekiKeiContext.cs",
+              "RelativeToolTip": "KekiKekiAPI\\Models\\KekiKeiContext.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAUwEgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T18:54:26.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrderDTO.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Proyectos Github\\Universidad\\AT_VM_ProyectoFinal\\backend\\KekiKekiAPI\\KekiKekiAPI\\Models\\DTOs\\OrderDTO.cs",
+              "RelativeDocumentMoniker": "KekiKekiAPI\\Models\\DTOs\\OrderDTO.cs",
+              "ToolTip": "C:\\Users\\andre\\Proyectos Github\\Universidad\\AT_VM_ProyectoFinal\\backend\\KekiKekiAPI\\KekiKekiAPI\\Models\\DTOs\\OrderDTO.cs",
+              "RelativeToolTip": "KekiKekiAPI\\Models\\DTOs\\OrderDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T18:13:39.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ContactController.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Proyectos Github\\Universidad\\AT_VM_ProyectoFinal\\backend\\KekiKekiAPI\\KekiKekiAPI\\Controllers\\ContactController.cs",
+              "RelativeDocumentMoniker": "KekiKekiAPI\\Controllers\\ContactController.cs",
+              "ToolTip": "C:\\Users\\andre\\Proyectos Github\\Universidad\\AT_VM_ProyectoFinal\\backend\\KekiKekiAPI\\KekiKekiAPI\\Controllers\\ContactController.cs",
+              "RelativeToolTip": "KekiKekiAPI\\Controllers\\ContactController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T18:11:02.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Proyectos Github\\Universidad\\AT_VM_ProyectoFinal\\backend\\KekiKekiAPI\\KekiKekiAPI\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "KekiKekiAPI\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\andre\\Proyectos Github\\Universidad\\AT_VM_ProyectoFinal\\backend\\KekiKekiAPI\\KekiKekiAPI\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "KekiKekiAPI\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACEAAACKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T18:11:00.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Pedido.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Proyectos Github\\Universidad\\AT_VM_ProyectoFinal\\backend\\KekiKekiAPI\\KekiKekiAPI\\Models\\Pedido.cs",
+              "RelativeDocumentMoniker": "KekiKekiAPI\\Models\\Pedido.cs",
+              "ToolTip": "C:\\Users\\andre\\Proyectos Github\\Universidad\\AT_VM_ProyectoFinal\\backend\\KekiKekiAPI\\KekiKekiAPI\\Models\\Pedido.cs",
+              "RelativeToolTip": "KekiKekiAPI\\Models\\Pedido.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T18:10:16.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductDTO.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Proyectos Github\\Universidad\\AT_VM_ProyectoFinal\\backend\\KekiKekiAPI\\KekiKekiAPI\\Models\\DTOs\\ProductDTO.cs",
+              "RelativeDocumentMoniker": "KekiKekiAPI\\Models\\DTOs\\ProductDTO.cs",
+              "ToolTip": "C:\\Users\\andre\\Proyectos Github\\Universidad\\AT_VM_ProyectoFinal\\backend\\KekiKekiAPI\\KekiKekiAPI\\Models\\DTOs\\ProductDTO.cs",
+              "RelativeToolTip": "KekiKekiAPI\\Models\\DTOs\\ProductDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T16:12:00.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\Proyectos Github\\Universidad\\AT_VM_ProyectoFinal\\backend\\KekiKekiAPI\\KekiKekiAPI\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "KekiKekiAPI\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\andre\\Proyectos Github\\Universidad\\AT_VM_ProyectoFinal\\backend\\KekiKekiAPI\\KekiKekiAPI\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "KekiKekiAPI\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T16:09:23.545Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

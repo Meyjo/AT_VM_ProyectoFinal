@@ -1,0 +1,36 @@
+<div class="menu-page">
+	<p-toast></p-toast>
+
+	<div class="header flex align-items-center gap-3">
+		<h2 class="title">Nuestro Menú</h2>
+		<span class="p-input-icon-left flex-1">
+			<i class="pi pi-search"></i>
+			<input pInputText type="text" placeholder="Buscar postres..." [(ngModel)]="search" (ngModelChange)="applyFilters()" class="w-full" />
+		</span>
+		<p-dropdown [options]="categories" optionLabel="label" optionValue="value" [(ngModel)]="selectedCategory" (onChange)="applyFilters()" [showClear]="true" placeholder="Categoría" [style]="{width:'14rem'}"></p-dropdown>
+	</div>
+
+	<div class="cards" *ngIf="!loading">
+		<div class="card" *ngFor="let product of filtered">
+				<div class="image">
+					<img [src]="product.image" [alt]="product.name" />
+					<p-tag [value]="product.category" severity="success" class="tag"></p-tag>
+				</div>
+				<div class="content">
+					<div class="name">{{ product.name }}</div>
+					<div class="desc">{{ product.description }}</div>
+					<div class="meta">
+						<span class="price">{{ product.price | currency:'USD':'symbol':'1.0-0' }}</span>
+					</div>
+					<div class="actions">
+						<button pButton type="button" icon="pi pi-shopping-cart" label="Agregar" class="p-button-help w-full" (click)="addToCart(product)"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<div *ngIf="!loading && !filtered.length" class="empty">
+		<i class="pi pi-search"></i>
+		<p>No hay productos que coincidan con tu búsqueda.</p>
+	</div>
+</div>

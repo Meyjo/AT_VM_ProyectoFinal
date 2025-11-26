@@ -1,0 +1,106 @@
+[
+  {
+    "ContainingType": "KekiKekiAPI.Controllers.ContactController",
+    "Method": "GetContact",
+    "RelativePath": "api/Contact/contact",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KekiKekiAPI.Controllers.ContactController",
+    "Method": "CreateContact",
+    "RelativePath": "api/Contact/contact",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newContact",
+        "Type": "KekiKekiAPI.Models.DTOs.ContactDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KekiKekiAPI.Controllers.OrderController",
+    "Method": "GetProducts",
+    "RelativePath": "api/Order/orders",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KekiKekiAPI.Controllers.OrderController",
+    "Method": "CreateProduct",
+    "RelativePath": "api/Order/orders",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newOrder",
+        "Type": "KekiKekiAPI.Models.DTOs.OrderDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KekiKekiAPI.Controllers.ProductController",
+    "Method": "GetCategories",
+    "RelativePath": "api/Product/categories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KekiKekiAPI.Controllers.ProductController",
+    "Method": "GetProducts",
+    "RelativePath": "api/Product/products",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KekiKekiAPI.Controllers.ProductController",
+    "Method": "CreateProduct",
+    "RelativePath": "api/Product/products",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newProduct",
+        "Type": "KekiKekiAPI.Models.DTOs.ProductDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KekiKekiAPI.Controllers.ProductController",
+    "Method": "DeleteProduct",
+    "RelativePath": "api/Product/products/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -1,0 +1,67 @@
+<div class="card">
+    <p-menubar [model]="items">
+        <ng-template pTemplate="start">
+            <div class="flex align-items-center gap-2 px-2" style="cursor: pointer;" (click)="goHome()">
+                <i class="pi pi-heart-fill text-pink-600 text-2xl"></i>
+                <span class="brand-name">KekiKeki</span>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="end">
+            <div class="flex align-items-center gap-2">
+                <p-button icon="pi pi-shopping-cart" styleClass="p-button-text p-button-rounded" (onClick)="cartVisible = true">
+                    <p-badge *ngIf="cartService.totalItems() > 0" [value]="cartService.totalItems().toString()" severity="danger"></p-badge>
+                </p-button>
+            </div>
+        </ng-template>
+    </p-menubar>
+</div>
+<p-toast></p-toast>
+<p-confirmDialog></p-confirmDialog>
+
+<p-drawer [(visible)]="cartVisible" position="right" [style]="{width: '360px'}" header="Tu Carrito Dulce" [modal]="true" styleClass="cart-drawer">
+    <div class="flex flex-column h-full">
+        <div class="flex-grow-1 overflow-y-auto">
+            <div *ngIf="cartService.getCartItems()().length === 0" class="text-center p-4">
+                <i class="pi pi-shopping-bag text-6xl text-gray-300 mb-3"></i>
+                <p class="text-gray-500">Tu carrito está vacío. ¡Agrega algo delicioso!</p>
+                <p-button label="Ir al Menú" [link]="true" (onClick)="goToMenu()"></p-button>
+            </div>
+
+            <div *ngFor="let item of cartService.getCartItems()()" class="cart-item flex align-items-center gap-3 mb-2 p-2 border-bottom-1 surface-border">
+                <div class="flex-grow-1">
+                    <div class="font-bold text-900 line-height-2">{{ item.name }}</div>
+                    <div class="text-sm text-gray-600">{{ item.price | currency:'USD':'symbol':'1.0-0' }}</div>
+                    <div class="flex align-items-center gap-2 mt-1">
+                        <p-button icon="pi pi-minus" [rounded]="true" [text]="true" (onClick)="decrease(item.id)"></p-button>
+                        <span class="text-sm px-2 py-1 border-round surface-100">{{ item.quantity }}</span>
+                        <p-button icon="pi pi-plus" [rounded]="true" [text]="true" (onClick)="increase(item.id)"></p-button>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <div class="font-bold text-pink-600">{{ (item.price * item.quantity) | currency:'USD':'symbol':'1.0-0' }}</div>
+                </div>
+                <p-button icon="pi pi-trash" [rounded]="true" [text]="true" severity="danger" (onClick)="cartService.removeFromCart(item.id)"></p-button>
+            </div>
+        </div>
+
+        <div class="border-top-1 surface-border pt-3 mt-2" *ngIf="cartService.getCartItems()().length > 0">
+            <div class="flex justify-content-between align-items-center mb-3">
+                <span class="text-xl font-bold">Total:</span>
+                <span class="text-2xl font-bold text-pink-600">{{ cartService.totalPrice() | currency:'USD':'symbol':'1.0-0' }}</span>
+            </div>
+            <div class="flex flex-column gap-2">
+                <form [formGroup]="orderForm">
+                    <input placeholder="Nombre cliente" formControlName="name">
+                    <small *ngIf="orderForm.get('name')?.hasError('required') && orderForm.get('name')?.touched">El nombre del cliente es requerido</small>
+                    <input placeholder="Dirección" formControlName="address">
+                    <small *ngIf="orderForm.get('address')?.hasError('required') && orderForm.get('address')?.touched">La dirección del cliente es requerida</small>
+                    <input placeholder="Celular" formControlName="phone">
+                    <small *ngIf="orderForm.get('phone')?.hasError('required') && orderForm.get('phone')?.touched">El teléfono del cliente es requerido</small>
+                    <small *ngIf="orderForm.get('phone')?.hasError('maxLength')">No es un teléfono</small>
+                </form>
+                <p-button [disabled]="!orderForm.valid" label="Proceder al Pago" styleClass="w-full p-button-help" icon="pi pi-check" (onClick)="checkout()"></p-button>
+                <p-button label="Vaciar Carrito" styleClass="w-full p-button-danger p-button-outlined" icon="pi pi-trash" (onClick)="confirmClearCart()"></p-button>
+            </div>
+        </div>
+    </div>
+</p-drawer>

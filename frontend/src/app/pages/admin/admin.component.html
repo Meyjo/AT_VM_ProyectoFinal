@@ -1,0 +1,101 @@
+<div class="card">
+    <p-toast></p-toast>
+    <p-tabView>
+        <p-tabPanel header="Productos">
+            <p-toolbar styleClass="mb-4 gap-2">
+                <ng-template pTemplate="left">
+                    <button pButton pRipple label="Nuevo" icon="pi pi-plus" class="p-button-success mr-2" (click)="openNew()"></button>
+                </ng-template>
+            </p-toolbar>
+
+            <p-table [value]="products" [rows]="10" [paginator]="true" [tableStyle]="{'min-width': '75rem'}"
+                [rowHover]="true" dataKey="id"
+                currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} productos" [showCurrentPageReport]="true">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th pSortableColumn="name" style="min-width:15rem">Nombre <p-sortIcon field="name"></p-sortIcon></th>
+                        <th>Imagen</th>
+                        <th pSortableColumn="price">Precio <p-sortIcon field="price"></p-sortIcon></th>
+                        <th pSortableColumn="category" style="min-width:10rem">Categoría <p-sortIcon field="category"></p-sortIcon></th>
+                        <th>Acciones</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-product>
+                    <tr>
+                        <td>{{product.name}}</td>
+                        <td><img [src]="product.image" [alt]="product.name" width="50" class="shadow-4" /></td>
+                        <td>{{product.price | currency:'USD'}}</td>
+                        <td>{{product.category}}</td>
+                        <td>
+                            <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning" (click)="deleteProduct(product)"></button>
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </p-tabPanel>
+        <p-tabPanel header="Pedidos">
+            <p-table [value]="orders" [tableStyle]="{'min-width': '50rem'}">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>ID Pedido</th>
+                        <th>Fecha</th>
+                        <th>Nombre</th>
+                        <th>Dirección</th>
+                        <th>Teléfono</th>
+                        <th>Total</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-order>
+                    <tr>
+                        <td>{{order.id}}</td>
+                        <td>{{order.date.replace('T',' ')}}</td>
+                        <td>{{order.name}}</td>
+                        <td>{{order.address}}</td>
+                        <td>{{order.phone}}</td>
+                        <td>{{order.total | currency:'USD'}}</td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </p-tabPanel>
+    </p-tabView>
+
+    <p-dialog [(visible)]="productDialog" [style]="{width: '450px'}" header="Detalles del Producto" [modal]="true" styleClass="p-fluid">
+        <ng-template pTemplate="content">
+            <form [formGroup]="creationForm" (ngSubmit)="saveProduct()">
+                <div class="field">
+                <label for="name">Nombre</label>
+                <input type="text" formControlName="name" pInputText id="name" required autofocus />
+                <small class="p-error" *ngIf="creationForm.get('name')?.hasError('required') && creationForm.get('name')?.touched">El nombre es requerido.</small>
+            </div>
+            <div class="field">
+                <label for="description">Descripción</label>
+                <textarea id="description" pInputTextarea formControlName="description" required rows="3" cols="20"></textarea>
+                <small class="p-error" *ngIf="creationForm.get('description')?.hasError('required') && creationForm.get('description')?.touched">La descripción es requerida.</small>
+            </div>
+            <div class="field">
+                <label for="image">Imágen</label>
+                <input type="text" formControlName="image" pInputText id="image" autofocus />
+            </div>
+            <div class="field">
+                <label for="category">Categoría</label>
+                <input type="text" pInputText id="category" formControlName="category" />
+                <small class="p-error" *ngIf="creationForm.get('category')?.hasError('required') && creationForm.get('category')?.touched">La categoría es requerida.</small>
+            </div>
+            <div class="formgrid grid">
+                <div class="field col">
+                    <label for="price">Precio</label>
+                    <p-inputNumber id="price" formControlName="price" mode="currency" currency="USD" locale="en-US"></p-inputNumber>
+                <small class="p-error" *ngIf="creationForm.get('price')?.hasError('required') && creationForm.get('price')?.touched">El precio es requerido.</small>
+                </div>
+            </div>
+            <button pButton pRipple label="Guardar" type="submit" icon="pi pi-check" class="p-button-text"></button>
+            </form>
+        </ng-template>
+
+        <ng-template pTemplate="footer">
+            <button pButton pRipple label="Cancelar" icon="pi pi-times" class="p-button-text" (click)="hideDialog()"></button>
+        </ng-template>
+    </p-dialog>
+
+    <p-confirmDialog [style]="{width: '450px'}"></p-confirmDialog>
+</div>
